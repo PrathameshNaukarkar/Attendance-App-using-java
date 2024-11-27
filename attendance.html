@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Attendance</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <h1>Mark Attendance</h1>
+    <form th:action="@{/attendance/mark}" method="post">
+        <label for="selfie">Selfie:</label>
+        <input type="text" id="selfie" name="selfie" required>
+        <button type="submit">Mark Attendance</button>
+    </form>
+    <a href="/attendance/history">View Attendance History</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Attendance History</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <h1>Attendance History</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Selfie</th>
+        </tr>
+        <tr th:each="attendance : ${history}">
+            <td th:text="${attendance.date}"></td>
+            <td th:text="${attendance.selfie}"></td>
+        </tr>
+    </table>
+    <a href="/attendance">Back to Attendance</a>
+</body>
+</html>
